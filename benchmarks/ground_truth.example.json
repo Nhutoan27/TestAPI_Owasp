@@ -1,0 +1,4 @@
+[
+  { "endpoint_path": "__PLACEHOLDER_REPLACE_ME__", "owasp_id": "API1:2023" },
+  { "endpoint_path": "__PLACEHOLDER_REPLACE_ME__", "owasp_id": "API5:2023" }
+]

@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+python-dotenv
+sqlalchemy[asyncio]
+asyncpg
+alembic
+httpx
+pyyaml
+python-owasp-zap-v2.4
+pytest
+pytest-asyncio

@@ -1,0 +1,24 @@
+services:
+  postgres:
+    image: postgres:16
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: testapi_owasp
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+  zap:
+    image: zaproxy/zap-stable
+    command: zap.sh -daemon -host 0.0.0.0 -port 8080 -config api.disablekey=false -config api.key=${ZAP_API_KEY:-changeme}
+    ports:
+      - "8080:8080"
+
+  # target:
+  #   Them service cho API cua du an DC (ASP.NET Core), hoac VAmPI/crAPI khi benchmark.
+  #   Chua co image co dinh trong repo nay; cau hinh theo tung target khi can.
+
+volumes:
+  pgdata:
