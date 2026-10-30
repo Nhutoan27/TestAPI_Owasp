@@ -218,3 +218,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Huong dan noi bo cho Claude Code - khong public tren GitHub
+CLAUDE.md
